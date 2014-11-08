@@ -1,0 +1,443 @@
+{
+   "RESTAction" : {
+      "actionPack" : {
+         "name" : "LifeRay",
+         "category" : "LifeRay",
+         "description" : "Integration actions for the LifeRay portal.  More information available at www.liferay.com.",
+         "author" : "CA Technologies",
+         "dependencies" : "",
+         "platform" : "Windows and Linux",
+         "version" : "0.1  ",
+         "license" : "",
+         "imageLocation" : "http://localhost:8080/RDKServer/workingDirectory/ActionPacks/liferay/liferay.png",
+         "lastModified" : "2014-11-05T23:06:56.916-08:00",
+         "tags" : [ ],
+         "packageName" : "liferay"
+      },
+      "name" : "Liferay - Update User",
+      "category" : "",
+      "description" : "Update user.",
+      "inputParamList" : [ {
+         "name" : "user",
+         "type" : "String",
+         "description" : "The user name to authenticate with the LifeRay RESTful service.",
+         "required" : false,
+         "variableName" : "user",
+         "arrayOption" : false
+      }, {
+         "name" : "password",
+         "type" : "String",
+         "description" : "The password to authenticate with the LifeRay RESTful service.",
+         "required" : false,
+         "variableName" : "password",
+         "arrayOption" : false
+      }, {
+         "name" : "Host",
+         "type" : "String",
+         "description" : "The hostname for the LifeRay RESTful service.",
+         "required" : true,
+         "defaultValue" : "localhost",
+         "variableName" : "host",
+         "arrayOption" : false
+      }, {
+         "name" : "Port",
+         "type" : "Integer",
+         "description" : "The port for the LifeRay RESTful service.",
+         "required" : true,
+         "defaultValue" : "8080",
+         "variableName" : "port",
+         "arrayOption" : false
+      }, {
+         "name" : "User ID",
+         "type" : "Integer",
+         "description" : "The LifeRay user ID for the user to be [retrieved|deleted|updated depending on the action].",
+         "required" : false,
+         "variableName" : "userid",
+         "arrayOption" : false
+      }, {
+         "name" : "Old Password",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "oldpassword",
+         "arrayOption" : false
+      }, {
+         "name" : "New Password1",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "newpassword1",
+         "arrayOption" : false
+      }, {
+         "name" : "New Password2",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "newpassword2",
+         "arrayOption" : false
+      }, {
+         "name" : "Password Reset",
+         "type" : "Boolean",
+         "required" : false,
+         "defaultValue" : "true",
+         "variableName" : "passwordreset",
+         "arrayOption" : false
+      }, {
+         "name" : "Reminder Query Question",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "reminderqueryquestion",
+         "arrayOption" : false
+      }, {
+         "name" : "Reminder Query Answer",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "reminderqueryanswer",
+         "arrayOption" : false
+      }, {
+         "name" : "Screen Name",
+         "type" : "String",
+         "required" : true,
+         "variableName" : "screenname",
+         "arrayOption" : false
+      }, {
+         "name" : "Email Address",
+         "type" : "String",
+         "required" : true,
+         "variableName" : "emailaddress",
+         "arrayOption" : false
+      }, {
+         "name" : "Facebook ID",
+         "type" : "Integer",
+         "required" : true,
+         "defaultValue" : "0",
+         "variableName" : "facebookid",
+         "arrayOption" : false
+      }, {
+         "name" : "Open ID",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "openid",
+         "arrayOption" : false
+      }, {
+         "name" : "Language ID",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "languageid",
+         "arrayOption" : false
+      }, {
+         "name" : "Time Zone ID",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "timezoneid",
+         "arrayOption" : false
+      }, {
+         "name" : "Greeting",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "greeting",
+         "arrayOption" : false
+      }, {
+         "name" : "Comments",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "comments",
+         "arrayOption" : false
+      }, {
+         "name" : "First Name",
+         "type" : "String",
+         "required" : true,
+         "variableName" : "firstname",
+         "arrayOption" : false
+      }, {
+         "name" : "Middle Name",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "middlename",
+         "arrayOption" : false
+      }, {
+         "name" : "Last Name",
+         "type" : "String",
+         "required" : true,
+         "variableName" : "lastname",
+         "arrayOption" : false
+      }, {
+         "name" : "Prefix ID",
+         "type" : "Integer",
+         "required" : true,
+         "defaultValue" : "0",
+         "variableName" : "prefixid",
+         "arrayOption" : false
+      }, {
+         "name" : "Suffix ID",
+         "type" : "Integer",
+         "required" : true,
+         "variableName" : "suffixid",
+         "arrayOption" : false
+      }, {
+         "name" : "Male",
+         "type" : "Boolean",
+         "required" : true,
+         "defaultValue" : "true",
+         "variableName" : "male",
+         "arrayOption" : false
+      }, {
+         "name" : "Birthday Month",
+         "type" : "Integer",
+         "required" : true,
+         "variableName" : "birthdaymonth",
+         "arrayOption" : false
+      }, {
+         "name" : "Birthday Day",
+         "type" : "Integer",
+         "required" : true,
+         "variableName" : "birthdayday",
+         "arrayOption" : false
+      }, {
+         "name" : "Birthday Year",
+         "type" : "Integer",
+         "required" : true,
+         "variableName" : "birthdayyear",
+         "arrayOption" : false
+      }, {
+         "name" : "Sms Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "smssn",
+         "arrayOption" : false
+      }, {
+         "name" : "Aim Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "aimsn",
+         "arrayOption" : false
+      }, {
+         "name" : "Facebook Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "facebooksn",
+         "arrayOption" : false
+      }, {
+         "name" : "Icq Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "icqsn",
+         "arrayOption" : false
+      }, {
+         "name" : "Jabber Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "jabbersn",
+         "arrayOption" : false
+      }, {
+         "name" : "Msn Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "msnsn",
+         "arrayOption" : false
+      }, {
+         "name" : "MySpace Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "myspacesn",
+         "arrayOption" : false
+      }, {
+         "name" : "Skype Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "skypesn",
+         "arrayOption" : false
+      }, {
+         "name" : "Twitter Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "twittersn",
+         "arrayOption" : false
+      }, {
+         "name" : "Ym Sn",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "ymsn",
+         "arrayOption" : false
+      }, {
+         "name" : "JobTitle",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "jobtitle",
+         "arrayOption" : false
+      }, {
+         "name" : "Group IDs",
+         "type" : "Integer",
+         "required" : false,
+         "variableName" : "groupids",
+         "arrayOption" : true
+      }, {
+         "name" : "Organization IDs",
+         "type" : "Integer",
+         "required" : false,
+         "variableName" : "organizationids",
+         "arrayOption" : true
+      }, {
+         "name" : "Role IDs",
+         "type" : "Integer",
+         "required" : false,
+         "variableName" : "roleids",
+         "arrayOption" : true
+      }, {
+         "name" : "User Group Roles",
+         "type" : "String",
+         "required" : false,
+         "variableName" : "usergrouproles",
+         "arrayOption" : false
+      }, {
+         "name" : "User Group IDs",
+         "type" : "Integer",
+         "required" : false,
+         "variableName" : "usergroupids",
+         "arrayOption" : true
+      } ],
+      "outputParamList" : [ {
+         "name" : "Execution Output",
+         "type" : "String",
+         "description" : "This output parameter holds the complete raw output of the RESTful Action execution",
+         "filterValue" : "[\\s\\S]*",
+         "filterType" : "REGEX",
+         "variableName" : "executionoutput",
+         "arrayOption" : false
+      } ],
+      "successMessage" : "Execution succeeded.",
+      "type" : "REST",
+      "complete" : true,
+      "lastModified" : "2014-11-05T23:08:43.061-08:00",
+      "className" : "LiferayUpdateUser",
+      "packageName" : "com.ca.liferay",
+      "requestURI" : "http://${Host}:${Port}/api/jsonws/user/update-user",
+      "requestMethod" : "POST",
+      "timeout" : 30,
+      "language" : "",
+      "bodyContent" : {
+         "contentType" : "application/json",
+         "encoding" : "utf-8",
+         "rawRequest" : "",
+         "requestParameters" : [ {
+            "key" : "userId",
+            "value" : "${User ID}"
+         }, {
+            "key" : "oldPassword",
+            "value" : "${Old Password}"
+         }, {
+            "key" : "newPassword1",
+            "value" : "${New Password1}"
+         }, {
+            "key" : "newPassword2",
+            "value" : "${New Password2}"
+         }, {
+            "key" : "passwordReset",
+            "value" : "${Password Reset}"
+         }, {
+            "key" : "reminderQueryQuestion",
+            "value" : "${Reminder Query Question}"
+         }, {
+            "key" : "reminderQueryAnswer",
+            "value" : "${Reminder Query Answer}"
+         }, {
+            "key" : "screenName",
+            "value" : "${Screen Name}"
+         }, {
+            "key" : "emailAddress",
+            "value" : "${Email Address}"
+         }, {
+            "key" : "facebookId",
+            "value" : "${Facebook ID}"
+         }, {
+            "key" : "openId",
+            "value" : "${Open ID}"
+         }, {
+            "key" : "languageId",
+            "value" : "${Language ID}"
+         }, {
+            "key" : "timeZoneId",
+            "value" : "${Time Zone ID}"
+         }, {
+            "key" : "greeting",
+            "value" : "${Greeting}"
+         }, {
+            "key" : "comments",
+            "value" : "${Comments}"
+         }, {
+            "key" : "firstName",
+            "value" : "${First Name}"
+         }, {
+            "key" : "middleName",
+            "value" : "${Middle Name}"
+         }, {
+            "key" : "lastName",
+            "value" : "${Last Name}"
+         }, {
+            "key" : "prefixId",
+            "value" : "${Prefix ID}"
+         }, {
+            "key" : "suffixId",
+            "value" : "${Suffix ID}"
+         }, {
+            "key" : "male",
+            "value" : "${Male}"
+         }, {
+            "key" : "birthdayMonth",
+            "value" : "${Birthday Month}"
+         }, {
+            "key" : "birthdayDay",
+            "value" : "${Birthday Day}"
+         }, {
+            "key" : "birthdayYear",
+            "value" : "${Birthday Year}"
+         }, {
+            "key" : "smsSn",
+            "value" : "${Sms Sn}"
+         }, {
+            "key" : "aimSn",
+            "value" : "${Aim Sn}"
+         }, {
+            "key" : "facebookSn",
+            "value" : "${Facebook Sn}"
+         }, {
+            "key" : "icqSn",
+            "value" : "${Icq Sn}"
+         }, {
+            "key" : "jabberSn",
+            "value" : "${Jabber Sn}"
+         }, {
+            "key" : "msnSn",
+            "value" : "${Msn Sn}"
+         }, {
+            "key" : "mySpaceSn",
+            "value" : "${MySpace Sn}"
+         }, {
+            "key" : "skypeSn",
+            "value" : "${Skype Sn}"
+         }, {
+            "key" : "twitterSn",
+            "value" : "${Twitter Sn}"
+         }, {
+            "key" : "ymSn",
+            "value" : "${Ym Sn}"
+         }, {
+            "key" : "jobTitle",
+            "value" : "${Job Title}"
+         }, {
+            "key" : "groupIds",
+            "value" : "${Group IDs}"
+         }, {
+            "key" : "organizationIds",
+            "value" : "${Organization IDs}"
+         }, {
+            "key" : "roleIds",
+            "value" : "${Role IDs}"
+         }, {
+            "key" : "userGroupRoles",
+            "value" : "${User Group Roles}"
+         }, {
+            "key" : "userGroupIds",
+            "value" : "${User Group IDs}"
+         } ]
+      },
+      "authentication" : [ "BASIC" ]
+   }
+}

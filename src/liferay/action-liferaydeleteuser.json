@@ -1,0 +1,87 @@
+{
+   "RESTAction" : {
+      "actionPack" : {
+         "name" : "LifeRay",
+         "category" : "LifeRay",
+         "description" : "Integration actions for the LifeRay portal.  More information available at www.liferay.com.",
+         "author" : "CA Technologies",
+         "dependencies" : "",
+         "platform" : "Windows and Linux",
+         "version" : "0.1  ",
+         "license" : "",
+         "imageLocation" : "http://localhost:8080/RDKServer/workingDirectory/ActionPacks/liferay/liferay.png",
+         "lastModified" : "2014-11-05T23:06:56.916-08:00",
+         "tags" : [ ],
+         "packageName" : "liferay"
+      },
+      "name" : "Liferay - Delete User",
+      "category" : "",
+      "description" : "Delete user from the LifeRay portal.",
+      "inputParamList" : [ {
+         "name" : "user",
+         "type" : "String",
+         "description" : "The user name to authenticate with the LifeRay RESTful service.",
+         "required" : false,
+         "variableName" : "user",
+         "arrayOption" : false
+      }, {
+         "name" : "password",
+         "type" : "String",
+         "description" : "The password to authenticate with the LifeRay RESTful service.",
+         "required" : false,
+         "variableName" : "password",
+         "arrayOption" : false
+      }, {
+         "name" : "Host",
+         "type" : "String",
+         "description" : "The hostname for the LifeRay RESTful service.",
+         "required" : true,
+         "defaultValue" : "localhost",
+         "variableName" : "host",
+         "arrayOption" : false
+      }, {
+         "name" : "Port",
+         "type" : "String",
+         "description" : "The port for the LifeRay RESTful service.",
+         "required" : true,
+         "variableName" : "port",
+         "arrayOption" : false
+      }, {
+         "name" : "User ID",
+         "type" : "String",
+         "description" : "The LifeRay user ID for the user to be [retrieved|deleted|updated depending on the action].",
+         "required" : true,
+         "variableName" : "userid",
+         "arrayOption" : false
+      } ],
+      "outputParamList" : [ {
+         "name" : "Execution Output",
+         "type" : "String",
+         "description" : "This output parameter holds the complete raw output of the RESTful Action execution",
+         "filterValue" : "[\\s\\S]*",
+         "filterType" : "REGEX",
+         "variableName" : "executionoutput",
+         "arrayOption" : false
+      } ],
+      "successMessage" : "Execution succeeded.",
+      "type" : "REST",
+      "complete" : true,
+      "lastModified" : "2014-11-05T23:08:42.276-08:00",
+      "className" : "LiferayDeleteUser",
+      "packageName" : "com.ca.liferay",
+      "requestURI" : "http://${Host}:${Port}/api/jsonws/user/delete-user",
+      "requestMethod" : "POST",
+      "timeout" : 30,
+      "language" : "",
+      "bodyContent" : {
+         "contentType" : "application/json",
+         "encoding" : "utf-8",
+         "rawRequest" : "",
+         "requestParameters" : [ {
+            "key" : "userId",
+            "value" : "${User ID}"
+         } ]
+      },
+      "authentication" : [ "BASIC" ]
+   }
+}

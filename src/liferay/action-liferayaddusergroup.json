@@ -1,0 +1,98 @@
+{
+   "RESTAction" : {
+      "actionPack" : {
+         "name" : "LifeRay",
+         "category" : "LifeRay",
+         "description" : "Integration actions for the LifeRay portal.  More information available at www.liferay.com.",
+         "author" : "CA Technologies",
+         "dependencies" : "",
+         "platform" : "Windows and Linux",
+         "version" : "0.1  ",
+         "license" : "",
+         "imageLocation" : "http://localhost:8080/RDKServer/workingDirectory/ActionPacks/liferay/liferay.png",
+         "lastModified" : "2014-11-05T23:06:56.916-08:00",
+         "tags" : [ ],
+         "packageName" : "liferay"
+      },
+      "name" : "Liferay - Add User Group",
+      "category" : "",
+      "description" : "Add user group to the LifeRay portal.",
+      "inputParamList" : [ {
+         "name" : "user",
+         "type" : "String",
+         "description" : "The user name to authenticate with the LifeRay RESTful service.",
+         "required" : false,
+         "variableName" : "user",
+         "arrayOption" : false
+      }, {
+         "name" : "password",
+         "type" : "String",
+         "description" : "The password to authenticate with the LifeRay RESTful service.",
+         "required" : false,
+         "variableName" : "password",
+         "arrayOption" : false
+      }, {
+         "name" : "Host",
+         "type" : "String",
+         "description" : "The hostname for the LifeRay RESTful service.",
+         "required" : true,
+         "defaultValue" : "localhost",
+         "variableName" : "host",
+         "arrayOption" : false
+      }, {
+         "name" : "Port",
+         "type" : "String",
+         "description" : "The port for the LifeRay RESTful service.",
+         "required" : true,
+         "defaultValue" : "8080",
+         "variableName" : "port",
+         "arrayOption" : false
+      }, {
+         "name" : "Description",
+         "type" : "String",
+         "description" : "The description of a new user group.",
+         "required" : true,
+         "variableName" : "description",
+         "arrayOption" : false
+      }, {
+         "name" : "Name",
+         "type" : "String",
+         "description" : "The name of a new user group.",
+         "required" : true,
+         "variableName" : "name",
+         "arrayOption" : false
+      } ],
+      "outputParamList" : [ {
+         "name" : "Execution Output",
+         "type" : "String",
+         "description" : "This output parameter holds the complete raw output of the RESTful Action execution",
+         "filterValue" : "[\\s\\S]*",
+         "filterType" : "REGEX",
+         "variableName" : "executionoutput",
+         "arrayOption" : false
+      } ],
+      "successMessage" : "Execution succeeded.",
+      "type" : "REST",
+      "complete" : true,
+      "lastModified" : "2014-11-05T23:08:41.941-08:00",
+      "className" : "LiferayAddUserGroup",
+      "packageName" : "com.ca.liferay",
+      "requestURI" : "http://${Host}:${Port}/api/jsonws/usergroup/add-user-group",
+      "requestMethod" : "POST",
+      "timeout" : 30,
+      "language" : "",
+      "bodyContent" : {
+         "contentType" : "application/json",
+         "encoding" : "utf-8",
+         "rawRequest" : "",
+         "requestParameters" : [ {
+            "key" : "name",
+            "value" : "${Name}"
+         }, {
+            "key" : "description",
+            "value" : "${Description}"
+         } ]
+      },
+      "authentication" : [ "BASIC" ]
+   }
+}

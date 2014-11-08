@@ -1,0 +1,16 @@
+{
+   "ActionPack" : {
+      "name" : "LifeRay",
+      "category" : "LifeRay",
+      "description" : "Integration actions for the LifeRay portal.  More information available at www.liferay.com.",
+      "author" : "CA Technologies",
+      "dependencies" : "",
+      "platform" : "Windows and Linux",
+      "version" : "0.1 ",
+      "license" : "",
+      "imageLocation" : "http://localhost:8080/RDKServer/workingDirectory/ActionPacks/liferay/liferay.png",
+      "lastModified" : "2014-11-05T23:06:56.916-08:00",
+      "tags" : [ ],
+      "packageName" : "liferay"
+   }
+}
